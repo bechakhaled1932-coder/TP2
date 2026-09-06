@@ -8,5 +8,7 @@ package net.thevpc.gaming.atom.examples.pong.main.shared.model;
  * @author Taha Ben Salah (taha.bensalah@gmail.com)
  */
 public enum AppTransport {
-    TCP, UDP, MULTICAST, RMI, CORBA
+    TCP, UDP, MULTICAST, RMI
+// CORBA is no more supported on Java platform
+//    , CORBA
 }

@@ -5,13 +5,11 @@
 package net.thevpc.gaming.atom.examples.pong.main.shared.dal;
 
 import net.thevpc.gaming.atom.examples.pong.main.client.dal.DALClient;
-import net.thevpc.gaming.atom.examples.pong.main.client.dal.corba.DALClientCorba;
 import net.thevpc.gaming.atom.examples.pong.main.client.dal.multicast.DALClientSocketMulticast;
 import net.thevpc.gaming.atom.examples.pong.main.client.dal.rmi.DALClientRMI;
 import net.thevpc.gaming.atom.examples.pong.main.client.dal.tcp.DALClientSocketTCP;
 import net.thevpc.gaming.atom.examples.pong.main.client.dal.udp.DALClientSocketUDP;
 import net.thevpc.gaming.atom.examples.pong.main.server.dal.DALServer;
-import net.thevpc.gaming.atom.examples.pong.main.server.dal.corba.DALServerCorba;
 import net.thevpc.gaming.atom.examples.pong.main.server.dal.multicast.DALServerSocketMulticast;
 import net.thevpc.gaming.atom.examples.pong.main.server.dal.rmi.DALServerRMI;
 import net.thevpc.gaming.atom.examples.pong.main.server.dal.tcp.DALServerSocketTCP;
@@ -40,9 +38,9 @@ public class DALFactory {
                 case RMI: {
                     return new DALServerRMI();
                 }
-                case CORBA: {
-                    return new DALServerCorba();
-                }
+//                case CORBA: {
+//                    return new DALServerCorba();
+//                }
                 default: {
                     return new DALServerSocketTCP();
                 }
@@ -67,9 +65,10 @@ public class DALFactory {
                 case RMI: {
                     return new DALClientRMI();
                 }
-                case CORBA: {
-                    return new DALClientCorba();
-                }
+// CORBA is no more supported on Java platform
+//                case CORBA: {
+//                    return new DALClientCorba();
+//                }
                 default: {
                     return new DALClientSocketTCP();
                 }

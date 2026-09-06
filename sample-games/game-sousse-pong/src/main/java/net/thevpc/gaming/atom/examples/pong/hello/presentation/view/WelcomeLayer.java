@@ -58,7 +58,8 @@ public class WelcomeLayer extends DefaultLayer {
         drawLabel(graphics, "[F2] UDP", 5, 15, 10 + 1 * tw, 350, tw - 5, 20, verdana10B, Color.WHITE, darkGreen, tr == AppTransport.UDP, SwingConstants.CENTER);
         drawLabel(graphics, "[F3] MULTICAST", 5, 15, 10 + 2 * tw, 350, tw - 5, 20, verdana10B, Color.WHITE, darkGreen, tr == AppTransport.MULTICAST, SwingConstants.CENTER);
         drawLabel(graphics, "[F4] RMI", 5, 15, 10 + 3 * tw, 350, tw - 5, 20, verdana10B, Color.WHITE, darkGreen, tr == AppTransport.RMI, SwingConstants.CENTER);
-        drawLabel(graphics, "[F5] CORBA", 5, 15, 10 + 4 * tw, 350, tw - 5, 20, verdana10B, Color.WHITE, darkGreen, tr == AppTransport.CORBA, SwingConstants.CENTER);
+// CORBA is no more supported on Java platform
+//        drawLabel(graphics, "[F5] CORBA", 5, 15, 10 + 4 * tw, 350, tw - 5, 20, verdana10B, Color.WHITE, darkGreen, tr == AppTransport.CORBA, SwingConstants.CENTER);
 
         if (blinkSequence.next(scene.getFrame()) == 1) {
             String text = "PRESS SPACE";

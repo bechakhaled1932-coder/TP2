@@ -64,10 +64,10 @@ public class WelcomeController extends DefaultSceneController {
                 model.setTransport(AppTransport.RMI);
                 break;
             }
-            case F5: {
-                model.setTransport(AppTransport.CORBA);
-                break;
-            }
+//            case F5: {
+//                model.setTransport(AppTransport.CORBA);
+//                break;
+//            }
         }
     }
 }
